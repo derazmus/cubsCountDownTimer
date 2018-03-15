@@ -18,40 +18,78 @@
 <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
 
 <body>
-                <div class = "container center">
-                  <p> Count Down to Opening Day 2018</p>
-                <br>
-                <div id="timer"></div>
-                </div>
-        
-<script type="text/javascript">
-//set the date were counting to
-var countDownDate = new Date("March 29,2018 11:40:00").getTime();
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container">
+        <p> Count Down to Opening Day 2018</p>
+        <br>
+        <div id="timer"></div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container">
+        <p> Count Down to Cubs Home Opener 2018</p>
+        <br>
+        <div id="homeTimer"></div>
+    </div>
+    <script type="text/javascript">
+    //set the date were counting to
+    var countDownDate = new Date("March 29,2018 11:40:00").getTime();
 
-//update every 1 second
-var x = setInterval(function() {
-    //get todays date and time
-    var now = new Date().getTime();
-    //find the distance between now and the countdown date
-    var distance = countDownDate - now;
+    //update every 1 second
+    var x = setInterval(function() {
+        //get todays date and time
+        var now = new Date().getTime();
+        //find the distance between now and the countdown date
+        var distance = countDownDate - now;
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the result in the element with id="demo"
-    document.getElementById("timer").innerHTML = days + " days " + hours + " hours " +
-        minutes + " minutes " + seconds + " seconds";
+        // Display the result in the element with id="demo"
+        document.getElementById("timer").innerHTML = days + " days " + hours + " hours " +
+            minutes + " minutes " + seconds + " seconds";
 
-    // If the count down is finished, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "EXPIRED";
-    }
-}, 1000);
-</script>
+        // If the count down is finished, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+    //set the date were counting to
+    var countDownDateHome = new Date("April 9,2018 13:20:00").getTime();
+
+    //update every 1 second
+    var x = setInterval(function() {
+        //get todays date and time
+        var now = new Date().getTime();
+        //find the distance between now and the countdown date
+        var distance = countDownDateHome - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("homeTimer").innerHTML = days + " days " + hours + " hours " +
+            minutes + " minutes " + seconds + " seconds";
+
+        // If the count down is finished, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("homeTimer").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
 </body>
 
 </html>

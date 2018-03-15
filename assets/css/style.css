@@ -1,13 +1,14 @@
 body{
-	background-image: url("../images/background.jpg");
+	background-image: url("../images/baseball.jpg");
 	background-repeat: no-repeat ;
 	background-size: 100%;
 }
 
-#timer{
+#timer, #homeTimer{
 	font-family: 'Rammetto One', cursive;
 	font-size: 40px;
 	text-align: center;
+	color: white;
 }
 
 #container {
@@ -18,4 +19,6 @@ p{
 	font-family: 'Rammetto One', cursive;
 	font-size: 40px;
 	text-align: center;
+	color: white;
 }
+
